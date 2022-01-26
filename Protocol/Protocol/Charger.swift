@@ -1,4 +1,4 @@
-struct Charger: Chargeable {
+struct Charger: Chargeable, Portable {
     let chargemAhPerHour: Double
 
     init(_ chagermAh: Double) {
@@ -7,7 +7,7 @@ struct Charger: Chargeable {
 
     func convert(chargeablemAhPerHour: Double) -> Double {
         if chargeablemAhPerHour < self.chargemAhPerHour {
-            return self.chargemAhPerHour - chargeablemAhPerHour
+            return chargeablemAhPerHour
         } else {
             return self.chargemAhPerHour
         }

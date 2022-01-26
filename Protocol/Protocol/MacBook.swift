@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MacBook {
+struct MacBook: Portable {
     var charger: Chargeable
     
     let mAhPerHour: Double
